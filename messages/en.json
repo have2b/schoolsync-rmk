@@ -1,0 +1,148 @@
+{
+  "metadata": {
+    "app": {
+      "title": "SchoolSync",
+      "version": "1.0.0"
+    }
+  },
+  "auth": {
+    "actions": {
+      "login": "Login",
+      "logout": "Logout"
+    },
+    "status": {
+      "loginSuccess": "Login Success",
+      "incorrectPassword": "Incorrect Password"
+    },
+    "fields": {
+      "username": {
+        "label": "Username",
+        "placeholder": "Enter username..."
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Enter password..."
+      }
+    }
+  },
+  "navigation": {
+    "menu": {
+      "title": "Navigation menu",
+      "tooltip": "Shortcut ctrl + b"
+    },
+    "sections": {
+      "student": "Student Management",
+      "teacher": "Teacher Management",
+      "department": "Department Management",
+      "class": "Class Management",
+      "course": "Course Management",
+      "grade": "Grade Management"
+    },
+    "actions": {
+      "add": "Add",
+      "edit": "Edit"
+    }
+  },
+  "header": {
+    "userMenu": {
+      "profile": "Profile",
+      "logout": "Logout"
+    }
+  },
+  "error": {
+    "types": {
+      "404": {
+        "title": "Page Not Found",
+        "description": "The Resource You Are Looking For Does Not Exist"
+      },
+      "500": {
+        "title": "Internal Server Error",
+        "description": "Something Went Wrong On Our End"
+      },
+      "403": {
+        "title": "Forbidden",
+        "description": "You Do Not Have Permission To Access This Resource"
+      },
+      "401": {
+        "title": "Unauthorized",
+        "description": "You Are Not Authorized To Access This Resource"
+      },
+      "default": {
+        "title": "Something Went Wrong",
+        "description": "Please try again later"
+      }
+    },
+    "details": {
+      "actions": {
+        "show": "Show Details",
+        "hide": "Hide Details"
+      },
+      "content": {
+        "title": "Error Details",
+        "id": "Error id"
+      }
+    },
+    "actions": {
+      "retry": "Try Again"
+    }
+  },
+  "department": {
+    "title": "Department",
+    "fields": {
+      "id": "Id",
+      "code": "Code",
+      "name": {
+        "label": "Name",
+        "placeholder": "Enter name"
+      },
+      "detail": {
+        "label": "Detail",
+        "placeholder": "Enter detail"
+      }
+    },
+    "columns": {
+      "action": "Action"
+    }
+  },
+  "table": {
+    "actions": {
+      "addNew": "Add New",
+      "import": "Import",
+      "export": "Export",
+      "selectAll": "Select All",
+      "deselectAll": "Deselect All",
+      "deleteSelected": "Delete Selected"
+    },
+    "pagination": {
+      "rowsPerPage": "Rows per page:",
+      "prev": "Previous",
+      "next": "Next"
+    }
+  },
+  "common": {
+    "status": {
+      "creating": "Creating...",
+      "updating": "Updating...",
+      "deleting": "Deleting...",
+      "created": "Created successfully",
+      "updated": "Updated successfully",
+      "deleted": "Deleted successfully",
+      "error": "Error",
+      "duplicatedName": "Duplicated name"
+    },
+    "actions": {
+      "submit": "Submit",
+      "cancel": "Cancel"
+    },
+    "search": {
+      "all": "All",
+      "placeholder": "Type something...",
+      "noResult": "No result..."
+    },
+    "confirmation": {
+      "title": "Are you sure?",
+      "accept": "Accept",
+      "deleteWarning": "This action cannot be undone. This will permanently delete this object?"
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "metadata": {
+    "app": {
+      "title": "SchoolSync",
+      "version": "1.0.0"
+    }
+  },
+  "auth": {
+    "actions": {
+      "login": "Đăng Nhập",
+      "logout": "Đăng Xuất"
+    },
+    "status": {
+      "loginSuccess": "Đăng Nhập Thành Công",
+      "incorrectPassword": "Mật Khẩu Không Đúng"
+    },
+    "fields": {
+      "username": {
+        "label": "Tài Khoản",
+        "placeholder": "Nhập tài khoản..."
+      },
+      "password": {
+        "label": "Mật Khẩu",
+        "placeholder": "Nhập mật khẩu..."
+      }
+    }
+  },
+  "navigation": {
+    "menu": {
+      "title": "Danh Sách",
+      "tooltip": "Phím Tắt Ctrl + B"
+    },
+    "sections": {
+      "student": "Quản Lý Sinh Viên",
+      "teacher": "Quản Lý Giảng Viên",
+      "department": "Quản Lý Khoa",
+      "class": "Quản Lý Lớp Hành Chính",
+      "course": "Quản Lý Học Phần",
+      "grade": "Quản Lý Điểm"
+    },
+    "actions": {
+      "add": "Thêm Mới",
+      "edit": "Chỉnh Sửa Thông Tin"
+    }
+  },
+  "header": {
+    "userMenu": {
+      "profile": "Tài Khoản",
+      "logout": "Đăng Xuất"
+    }
+  },
+  "error": {
+    "types": {
+      "404": {
+        "title": "Không Tìm Thấy Tài Nguyên",
+        "description": "Tài Nguyên Bạn Đang Tìm Kiếm Không Tồn Tại"
+      },
+      "500": {
+        "title": "Lỗi Máy Chủ",
+        "description": "Có Lỗi Xảy Ra Từ Phía Máy Chủ"
+      },
+      "403": {
+        "title": "Không Có Quyền Truy Cập",
+        "description": "Bạn Không Có Quyền Truy Cập Vào Tài Nguyên Này"
+      },
+      "401": {
+        "title": "Lỗi Xác Thực",
+        "description": "Bạn Không Có Quyền Truy Cập Vào Tài Nguyên Này"
+      },
+      "default": {
+        "title": "Có Lỗi Xảy Ra",
+        "description": "Vui Lòng Thử Lại Sau"
+      }
+    },
+    "details": {
+      "actions": {
+        "show": "Chi Tiết",
+        "hide": "Đóng"
+      },
+      "content": {
+        "title": "Chi Tiết",
+        "id": "Mã Lỗi"
+      }
+    },
+    "actions": {
+      "retry": "Thử Lại"
+    }
+  },
+  "department": {
+    "title": "Khoa",
+    "fields": {
+      "id": "Id",
+      "code": "Mã Khoa",
+      "name": {
+        "label": "Tên Khoa",
+        "placeholder": "Điền Tên Khoa"
+      },
+      "detail": {
+        "label": "Mô Tả",
+        "placeholder": "Điền Mô Tả Khoa"
+      }
+    },
+    "columns": {
+      "action": "Thao Tác"
+    }
+  },
+  "table": {
+    "actions": {
+      "addNew": "Thêm Mới",
+      "import": "Nhập Dữ Liệu",
+      "export": "Xuất Dữ Liệu",
+      "selectAll": "Chọn Tất Cả",
+      "deselectAll": "Bỏ Chọn Tất Cả",
+      "deleteSelected": "Xóa Mục Đã Chọn"
+    },
+    "pagination": {
+      "rowsPerPage": "Số hàng:",
+      "prev": "Trước",
+      "next": "Sau"
+    }
+  },
+  "common": {
+    "status": {
+      "creating": "Đang Tạo...",
+      "updating": "Đang Cập Nhật...",
+      "deleting": "Đang Xóa...",
+      "created": "Tạo Thành Công",
+      "updated": "Cập Nhật Thành Công",
+      "deleted": "Xóa Thành Công",
+      "error": "Lỗi",
+      "duplicatedName": "Tên Bị Trùng"
+    },
+    "actions": {
+      "submit": "Lưu",
+      "cancel": "Hủy"
+    },
+    "search": {
+      "all": "Tất Cả",
+      "placeholder": "Nhập gì đó...",
+      "noResult": "Không Tìm Thấy Kết Quả"
+    },
+    "confirmation": {
+      "title": "Bạn Có Chắc?",
+      "accept": "Xác Nhận",
+      "deleteWarning": "Hành động này không thể hoàn tác. Bạn có thực sự muốn xóa đối tượng này?"
+    }
+  }
+}
