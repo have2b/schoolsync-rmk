@@ -12,7 +12,8 @@
     },
     "status": {
       "loginSuccess": "Login Success",
-      "incorrectPassword": "Incorrect Password"
+      "incorrectPassword": "Incorrect Password",
+      "notFound": "User Not Found"
     },
     "fields": {
       "username": {
