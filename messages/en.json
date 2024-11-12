@@ -54,7 +54,7 @@
     "types": {
       "404": {
         "title": "Page Not Found",
-        "description": "The Resource You Are Looking For Does Not Exist"
+        "description": "Oops! The page you're looking for doesn't exist."
       },
       "500": {
         "title": "Internal Server Error",
@@ -62,11 +62,11 @@
       },
       "403": {
         "title": "Forbidden",
-        "description": "You Do Not Have Permission To Access This Resource"
+        "description": "Sorry, you don't have permission to access this page."
       },
       "401": {
         "title": "Unauthorized",
-        "description": "You Are Not Authorized To Access This Resource"
+        "description": "Oops! It seems you don't have permission to access this page."
       },
       "default": {
         "title": "Something Went Wrong",
@@ -84,7 +84,8 @@
       }
     },
     "actions": {
-      "retry": "Try Again"
+      "retry": "Try Again",
+      "goHome": "Go back home"
     }
   },
   "department": {

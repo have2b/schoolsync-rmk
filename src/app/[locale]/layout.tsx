@@ -1,9 +1,8 @@
-import { SidebarProvider } from '@/components';
+import { SidebarProvider, Toaster } from '@/components';
 import { routing } from '@/i18n/routing';
-// import { SessionProvider } from '@/providers/SessionProvider';
-import { Toaster } from '@/components';
 import AuthProvider from '@/providers/AuthProvider';
 import { QueryProvider } from '@/providers/QueryProvider';
+import { pick } from 'lodash';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
@@ -39,7 +38,7 @@ export default async function MainLayout({ children, params }: Readonly<MainLayo
   return (
     <html lang={locale}>
       <body className={`${robotoFlex.variable} antialiased`}>
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={pick(messages, 'error')}>
           <QueryProvider>
             <SidebarProvider>
               <main className="w-full">

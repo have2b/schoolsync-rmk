@@ -54,7 +54,7 @@
     "types": {
       "404": {
         "title": "Không Tìm Thấy Tài Nguyên",
-        "description": "Tài Nguyên Bạn Đang Tìm Kiếm Không Tồn Tại"
+        "description": "Ồ! Tài nguyên bạn đang tìm kiếm không tồn tại"
       },
       "500": {
         "title": "Lỗi Máy Chủ",
@@ -62,11 +62,11 @@
       },
       "403": {
         "title": "Không Có Quyền Truy Cập",
-        "description": "Bạn Không Có Quyền Truy Cập Vào Tài Nguyên Này"
+        "description": "Xin lỗi, bạn không có quyền truy cập vào trang này."
       },
       "401": {
         "title": "Lỗi Xác Thực",
-        "description": "Bạn Không Có Quyền Truy Cập Vào Tài Nguyên Này"
+        "description": "Ồ! Có vẻ bạn không có không có quyền truy cập vào trang này."
       },
       "default": {
         "title": "Có Lỗi Xảy Ra",
@@ -84,7 +84,8 @@
       }
     },
     "actions": {
-      "retry": "Thử Lại"
+      "retry": "Thử Lại",
+      "goHome": "Về trang chủ"
     }
   },
   "department": {
