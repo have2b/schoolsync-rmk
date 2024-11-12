@@ -13,7 +13,8 @@
     "status": {
       "loginSuccess": "Login Success",
       "incorrectPassword": "Incorrect Password",
-      "notFound": "User Not Found"
+      "notFound": "User Not Found",
+      "logoutSuccess": "Logout Success"
     },
     "fields": {
       "username": {

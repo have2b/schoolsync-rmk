@@ -36,6 +36,7 @@
     "framer-motion": "^11.11.13",
     "jose": "^5.9.6",
     "jotai": "^2.10.2",
+    "js-cookie": "^3.0.5",
     "lodash": "^4.17.21",
     "lucide-react": "^0.456.0",
     "next": "15.0.3",
@@ -53,6 +54,7 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^9.2.0",
+    "@types/js-cookie": "^3.0.6",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

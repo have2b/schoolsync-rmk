@@ -1,3 +1,4 @@
+import { deleteSession } from '@/action';
 import { Account } from '@prisma/client';
 import { atom, useAtom, useAtomValue } from 'jotai';
 import { useEffect } from 'react';
@@ -55,7 +56,9 @@ export const useAuth = () => {
   const logout = async () => {
     setAccount(null);
     storeAccount(null);
-    window.location.href = '/';
+    await deleteSession();
+
+    return true;
   };
 
   return { account, loading, login, logout, isAuthenticated };

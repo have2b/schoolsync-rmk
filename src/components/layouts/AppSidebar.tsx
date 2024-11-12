@@ -12,7 +12,6 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarTrigger,
-  useSidebar,
 } from '@/components';
 import { ADMIN_NAV_LINKS, STUDENT_NAV_LINKS, TEACHER_NAV_LINKS } from '@/constants';
 import { useAuth } from '@/store/auth';
@@ -23,7 +22,6 @@ import { usePathname } from 'next/navigation';
 
 export function AppSidebar() {
   const t = useTranslations('navigation.sections');
-  const { open } = useSidebar();
   const pathname = usePathname();
   const { account } = useAuth();
   // Get appropriate nav links based on role
@@ -64,12 +62,11 @@ export function AppSidebar() {
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader>
-        <SidebarMenuButton asChild>
-          <Link className="flex w-full items-center justify-center gap-4 p-8" href={'/'}>
-            <div className="relative h-10 w-10">
+        <SidebarMenuButton asChild className="hover:bg-sidebar-primary-foreground p-8">
+          <Link className="flex w-full items-center justify-center" href={'/'}>
+            <div className="relative size-20">
               <Image src={'/logo.svg'} alt="logo" fill />
             </div>
-            <span className={`text-4xl font-bold text-black ${open ? 'block' : 'hidden'}`}>GG</span>
           </Link>
         </SidebarMenuButton>
       </SidebarHeader>
@@ -84,7 +81,7 @@ export function AppSidebar() {
                     isActive={isActiveLink(link.href)}
                     tooltip={t(link.name)}
                   >
-                    <LocaleLink href={link.href}>
+                    <LocaleLink href={link.href} className="h-full py-3">
                       {link.icon}
                       <span>{t(link.name)}</span>
                     </LocaleLink>

@@ -13,7 +13,8 @@
     "status": {
       "loginSuccess": "Đăng Nhập Thành Công",
       "incorrectPassword": "Mật Khẩu Không Đúng",
-      "notFound": "Tài Khoản Không Tồn Tại"
+      "notFound": "Tài Khoản Không Tồn Tại",
+      "logoutSuccess": "Đăng Xuất Thành Công"
     },
     "fields": {
       "username": {

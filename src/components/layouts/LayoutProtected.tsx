@@ -51,5 +51,5 @@ export function LayoutProtected({ children, allowedRoles = [] }: Readonly<Layout
     return null;
   }
 
-  return <div className="h-full w-full">{children}</div>;
+  return <div className="flex h-full w-full">{children}</div>;
 }
