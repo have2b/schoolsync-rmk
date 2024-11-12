@@ -11,10 +11,7 @@ interface LayoutProtectedProps {
   allowedRoles?: string[];
 }
 
-export default function LayoutProtected({
-  children,
-  allowedRoles = [],
-}: Readonly<LayoutProtectedProps>) {
+export function LayoutProtected({ children, allowedRoles = [] }: Readonly<LayoutProtectedProps>) {
   const router = useRouter();
   const params = useParams();
   const { account, loading, isAuthenticated } = useAuth();
