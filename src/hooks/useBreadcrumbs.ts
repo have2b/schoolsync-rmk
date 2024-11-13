@@ -1,6 +1,7 @@
 'use client';
 
-import { ADMIN_NAV_LINKS } from '@/constants';
+import { getNavLinks } from '@/lib/utils';
+import { useAuth } from '@/store/auth';
 import { usePathname } from 'next/navigation';
 import { useMemo } from 'react';
 
@@ -11,7 +12,10 @@ interface BreadcrumbItemProps {
 
 export const useBreadcrumbs = () => {
   const pathname = usePathname();
-  const links = ADMIN_NAV_LINKS;
+  const { account } = useAuth();
+  // Get appropriate nav links based on role
+
+  const navLinks = getNavLinks(account?.role || 'Admin');
 
   return useMemo(() => {
     // Split the pathname and get the locale from the first segment
@@ -35,7 +39,7 @@ export const useBreadcrumbs = () => {
       const isNextSegmentNumeric = !isNaN(Number(nextSegment));
 
       const currentPath = '/' + [locale, ...previousSegments].join('/');
-      const navItem = links.find((link) => link.href === '/' + segment);
+      const navItem = navLinks.find((link) => link.href === '/' + segment);
 
       // If it's a nav item, prepend the locale to its href
       let href = navItem ? `/${locale}${navItem.href}` : currentPath;
@@ -58,5 +62,5 @@ export const useBreadcrumbs = () => {
       breadcrumbs,
       contentTitle: pathSegments[0] || '',
     };
-  }, [pathname, links]);
+  }, [pathname, navLinks]);
 };

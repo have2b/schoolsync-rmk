@@ -13,7 +13,7 @@ import {
   SidebarMenuItem,
   SidebarTrigger,
 } from '@/components';
-import { ADMIN_NAV_LINKS, STUDENT_NAV_LINKS, TEACHER_NAV_LINKS } from '@/constants';
+import { getNavLinks } from '@/lib/utils';
 import { useAuth } from '@/store/auth';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
@@ -24,21 +24,8 @@ export function AppSidebar() {
   const t = useTranslations('navigation.sections');
   const pathname = usePathname();
   const { account } = useAuth();
-  // Get appropriate nav links based on role
-  const getNavLinks = () => {
-    switch (account?.role) {
-      case 'Admin':
-        return ADMIN_NAV_LINKS;
-      case 'Teacher':
-        return TEACHER_NAV_LINKS;
-      case 'Student':
-        return STUDENT_NAV_LINKS;
-      default:
-        return [];
-    }
-  };
 
-  const navLinks = getNavLinks();
+  const navLinks = getNavLinks(account?.role || 'Admin');
 
   // Function to check if the current path matches the menu item's href
   const isActiveLink = (href: string) => {
@@ -62,7 +49,7 @@ export function AppSidebar() {
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader>
-        <SidebarMenuButton asChild className="p-8 hover:bg-sidebar-primary-foreground">
+        <SidebarMenuButton asChild className="p-8 hover:bg-secondary">
           <Link className="flex w-full items-center justify-center" href={'/'}>
             <div className="relative size-20">
               <Image src={'/logo.svg'} alt="logo" fill />
