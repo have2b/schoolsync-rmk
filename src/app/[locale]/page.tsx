@@ -12,7 +12,20 @@ export default function Home() {
   useEffect(() => {
     if (!loading && isAuthenticated && account) {
       const locale = (params.locale as string) || 'vi';
-      router.push(`/${locale}/${account.role.toLowerCase()}`);
+
+      switch (account.role) {
+        case 'Admin':
+          router.push(`/${locale}/admin/student`);
+          break;
+        case 'Student':
+          router.push(`/${locale}/student/grade`);
+          break;
+        case 'Teacher':
+          router.push(`/${locale}/teacher/course`);
+          break;
+        default:
+          break;
+      }
     }
   }, [loading, isAuthenticated, account, params, router]);
 

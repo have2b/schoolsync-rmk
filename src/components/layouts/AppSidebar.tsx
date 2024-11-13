@@ -52,7 +52,7 @@ export function AppSidebar() {
 
     // Check if the second segment of the pathname matches the second segment of the href
     if (pathSegments.length > 1 && hrefSegments.length > 0) {
-      return pathSegments[1] === hrefSegments[0];
+      return pathSegments[2] === hrefSegments[0];
     }
 
     // Handle other routes - check if pathname starts with href
@@ -62,7 +62,7 @@ export function AppSidebar() {
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader>
-        <SidebarMenuButton asChild className="hover:bg-sidebar-primary-foreground p-8">
+        <SidebarMenuButton asChild className="p-8 hover:bg-sidebar-primary-foreground">
           <Link className="flex w-full items-center justify-center" href={'/'}>
             <div className="relative size-20">
               <Image src={'/logo.svg'} alt="logo" fill />

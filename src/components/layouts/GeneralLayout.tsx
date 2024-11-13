@@ -1,5 +1,6 @@
 import { AppSidebar, SidebarProvider } from '@/components';
 import React from 'react';
+import { CustomBreadcrumb } from './CustomBreadcrumb';
 import { Header } from './Header';
 
 export function GeneralLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -8,7 +9,7 @@ export function GeneralLayout({ children }: Readonly<{ children: React.ReactNode
       <AppSidebar />
       <div className="flex w-full flex-col">
         <Header />
-        {children}
+        <CustomBreadcrumb>{children}</CustomBreadcrumb>
       </div>
     </SidebarProvider>
   );
