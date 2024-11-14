@@ -38,10 +38,8 @@
       "department": "Quản Lý Khoa",
       "class": "Quản Lý Lớp Hành Chính",
       "course": "Quản Lý Học Phần",
-      "grade": "Quản Lý Điểm"
-    },
-    "actions": {
-      "add": "Thêm Mới",
+      "grade": "Quản Lý Điểm",
+      "add": "Thêm mới",
       "edit": "Chỉnh Sửa Thông Tin"
     }
   },

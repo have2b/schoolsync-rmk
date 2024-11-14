@@ -14,6 +14,7 @@ import React from 'react';
 
 export const CustomBreadcrumb: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { breadcrumbs, contentTitle } = useBreadcrumbs();
+
   const t = useTranslations('navigation');
 
   return (
@@ -37,7 +38,7 @@ export const CustomBreadcrumb: React.FC<{ children: React.ReactNode }> = ({ chil
                     </BreadcrumbPage>
                   ) : (
                     <BreadcrumbLink href={breadcrumb.href} className="flex items-center gap-2">
-                      {t(breadcrumb.label)}
+                      {t('sections.'.concat(breadcrumb.label))}
                     </BreadcrumbLink>
                   )}
                 </BreadcrumbItem>

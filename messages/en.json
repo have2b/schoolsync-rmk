@@ -38,9 +38,7 @@
       "department": "Department Management",
       "class": "Class Management",
       "course": "Course Management",
-      "grade": "Grade Management"
-    },
-    "actions": {
+      "grade": "Grade Management",
       "add": "Add",
       "edit": "Edit"
     }
