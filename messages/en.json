@@ -93,7 +93,10 @@
     "title": "Department",
     "fields": {
       "id": "Id",
-      "code": "Code",
+      "code": {
+        "label": "Code",
+        "placeholder": "Enter code"
+      },
       "name": {
         "label": "Name",
         "placeholder": "Enter name"
@@ -138,14 +141,29 @@
       "cancel": "Cancel"
     },
     "search": {
+      "title": "Search by",
       "all": "All",
       "placeholder": "Type something...",
       "noResult": "No result..."
     },
+    "filter": {
+      "title": "Filter",
+      "toggleColumn": "Select column",
+      "searchColumn": "Search column",
+      "clear": "Clear filter"
+    },
+    "row": {
+      "perPage": "Rows per page",
+      "selected": "Selected {row, plural, =0 {0 row} =1 {1 row} other {# rows}}",
+      "showing": "Page {row} in total {total, plural, =0 {0 page} =1 {1 page} other {# pages}} "
+    },
+    "columns": {
+      "action": "Action"
+    },
     "confirmation": {
       "title": "Are you sure?",
       "accept": "Accept",
-      "deleteWarning": "This action cannot be undone. This will permanently delete this object?"
+      "deleteWarning": "This action cannot be undone. Are you sure you want to delete {row, plural, =1 {this object} other {these # objects}}?"
     }
   }
 }

@@ -93,28 +93,28 @@
     "title": "Khoa",
     "fields": {
       "id": "Id",
-      "code": "Mã Khoa",
+      "code": {
+        "label": "Mã khoa",
+        "placeholder": "Điền mã khoa"
+      },
       "name": {
-        "label": "Tên Khoa",
-        "placeholder": "Điền Tên Khoa"
+        "label": "Tên khoa",
+        "placeholder": "Điền tên khoa"
       },
       "detail": {
-        "label": "Mô Tả",
-        "placeholder": "Điền Mô Tả Khoa"
+        "label": "Mô tả",
+        "placeholder": "Điền mô tả khoa"
       }
-    },
-    "columns": {
-      "action": "Thao Tác"
     }
   },
   "table": {
     "actions": {
-      "addNew": "Thêm Mới",
-      "import": "Nhập Dữ Liệu",
-      "export": "Xuất Dữ Liệu",
-      "selectAll": "Chọn Tất Cả",
-      "deselectAll": "Bỏ Chọn Tất Cả",
-      "deleteSelected": "Xóa Mục Đã Chọn"
+      "addNew": "Thêm mới",
+      "import": "Nhập dữ liệu",
+      "export": "Xuất dữ liệu",
+      "selectAll": "Chọn tất cả",
+      "deselectAll": "Bỏ chọn tất cả",
+      "deleteSelected": "Xóa mục đã chọn"
     },
     "pagination": {
       "rowsPerPage": "Số hàng:",
@@ -138,14 +138,29 @@
       "cancel": "Hủy"
     },
     "search": {
-      "all": "Tất Cả",
+      "title": "Tìm kiếm theo",
+      "all": "Tất cả",
       "placeholder": "Nhập gì đó...",
       "noResult": "Không Tìm Thấy Kết Quả"
     },
+    "filter": {
+      "title": "Bộ lọc",
+      "toggleColumn": "Chọn cột",
+      "searchColumn": "Cột tìm kiếm",
+      "clear": "Xóa bộ lọc"
+    },
+    "row": {
+      "perPage": "Số hàng",
+      "selected": "Đã chọn {row, plural, =1 {1 hàng} other {# hàng}}",
+      "showing": "Trang {row} trên tổng {total} trang"
+    },
+    "columns": {
+      "action": "Thao tác"
+    },
     "confirmation": {
-      "title": "Bạn Có Chắc?",
-      "accept": "Xác Nhận",
-      "deleteWarning": "Hành động này không thể hoàn tác. Bạn có thực sự muốn xóa đối tượng này?"
+      "title": "Bạn có chắc?",
+      "accept": "Xác nhận",
+      "deleteWarning": "Hành động này không thể hoàn tác. Bạn có thực sự muốn xóa {row, plural, =1 {} other {#}} đối tượng này?"
     }
   }
 }

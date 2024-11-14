@@ -2,9 +2,9 @@ import prisma from '@/prisma';
 import { faker } from '@faker-js/faker';
 import argon2 from 'argon2';
 
-const ACCOUNT_LIMIT = 1000;
-const DEPARTMENT_LIMIT = 500;
-const COURSE_LIMIT = 1000;
+const ACCOUNT_LIMIT = 100;
+const DEPARTMENT_LIMIT = 20;
+const COURSE_LIMIT = 200;
 
 const getRandomItem = <T>(array: T[]) => array[Math.floor(Math.random() * array.length)];
 
@@ -191,7 +191,7 @@ if (studentCourseData.length === 0) {
   }
 
   // Insert in batches to handle large datasets
-  const batchSize = 1000;
+  const batchSize = 200;
   for (let i = 0; i < fakeStudentCourses.length; i += batchSize) {
     const batch = fakeStudentCourses.slice(i, i + batchSize);
     await prisma.studentCourse.createMany({

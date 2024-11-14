@@ -68,7 +68,10 @@ export function AppSidebar() {
                     isActive={isActiveLink(link.href)}
                     tooltip={t(link.name)}
                   >
-                    <LocaleLink href={link.href} className="h-full py-3">
+                    <LocaleLink
+                      href={'/'.concat(account?.role.toLowerCase().concat(link.href) ?? '/vi')}
+                      className="h-full py-3"
+                    >
                       {link.icon}
                       <span>{t(link.name)}</span>
                     </LocaleLink>
