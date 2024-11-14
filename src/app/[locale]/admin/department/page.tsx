@@ -19,7 +19,7 @@ const AdminDepartment = () => {
   return (
     <DataTable
       columns={departmentColumn}
-      data={data?.data ?? []}
+      data={data.data ?? []}
       searchableColumns={['name', 'detail', 'code']}
       modelName="department"
     />

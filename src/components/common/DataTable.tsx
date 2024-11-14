@@ -13,7 +13,7 @@ import {
   getSortedRowModel,
   useReactTable,
 } from '@tanstack/react-table';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 
 import {
   AlertDialog,
@@ -45,6 +45,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components';
+import { useCrud } from '@/hooks';
 import { cn } from '@/lib/utils';
 import {
   ChevronLeft,
@@ -130,9 +131,13 @@ export function DataTable<TData, TValue>({
   const [pageSize, setPageSize] = useState(10);
   const [columnSearches, setColumnSearches] = useState<Record<string, boolean>>({});
 
+  const activeData = useMemo(() => {
+    return data.filter((item) => (item as { isActive: boolean }).isActive);
+  }, [data]);
+
   const t = useTranslations();
   const table = useReactTable({
-    data,
+    data: activeData,
     columns,
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
@@ -166,8 +171,15 @@ export function DataTable<TData, TValue>({
     setColumnSearches({});
   };
 
-  // const selectedRows = table.getSelectedRowModel().rows.map((row) => row.original);
-  const selectedRows = [];
+  const selectedRows = table.getSelectedRowModel().rows.map((row) => row.original);
+
+  const { useBulkDelete } = useCrud({ modelName });
+  const { mutate: bulkDeleteData } = useBulkDelete();
+
+  const handleDelete = () => {
+    bulkDeleteData(selectedRows.map((row) => (row as { id: number | string }).id.toString()));
+    table.toggleAllRowsSelected(false);
+  };
 
   const paginationSection = (
     <div className="flex items-center justify-between px-2">
@@ -353,7 +365,7 @@ export function DataTable<TData, TValue>({
                 </AlertDialogHeader>
                 <AlertDialogFooter>
                   <AlertDialogCancel>{t('common.actions.cancel')}</AlertDialogCancel>
-                  <AlertDialogAction onClick={() => {}}>
+                  <AlertDialogAction onClick={() => handleDelete()}>
                     {t('common.confirmation.accept')}
                   </AlertDialogAction>
                 </AlertDialogFooter>

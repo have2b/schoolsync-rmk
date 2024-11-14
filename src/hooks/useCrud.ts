@@ -51,12 +51,12 @@ export const useCrud = ({ modelName }: CrudHookProps) => {
       },
       onMutate: () => {
         // Show loading toast when mutation starts
-        toast.loading(t('creating'));
+        toast.loading(t('status.creating'));
       },
       onSuccess: () => {
         // Clear loading toast and show success
         toast.dismiss();
-        toast.success(t('created'));
+        toast.success(t('status.created'));
         queryClient.invalidateQueries({ queryKey: [modelName] });
       },
       onError: (error: Error) => {
@@ -83,12 +83,12 @@ export const useCrud = ({ modelName }: CrudHookProps) => {
       },
       onMutate: () => {
         // Show loading toast when mutation starts
-        toast.loading(t('updating'));
+        toast.loading(t('status.updating'));
       },
       onSuccess: () => {
         // Clear loading toast and show success
         toast.dismiss();
-        toast.success(t('updated'));
+        toast.success(t('status.updated'));
         queryClient.invalidateQueries({ queryKey: [modelName] });
       },
       onError: (error: Error) => {
@@ -112,12 +112,12 @@ export const useCrud = ({ modelName }: CrudHookProps) => {
       },
       onMutate: () => {
         // Show loading toast when mutation starts
-        toast.loading(t('deleting'));
+        toast.loading(t('status.deleting'));
       },
       onSuccess: () => {
         // Clear loading toast and show success
         toast.dismiss();
-        toast.success(t('deleted'));
+        toast.success(t('status.deleted'));
         queryClient.invalidateQueries({ queryKey: [modelName] });
       },
       onError: (error: Error) => {
@@ -141,12 +141,12 @@ export const useCrud = ({ modelName }: CrudHookProps) => {
       },
       onMutate: () => {
         // Show loading toast when mutation starts
-        toast.loading(t('deleting'));
+        toast.loading(t('status.deleting'));
       },
       onSuccess: () => {
         // Clear loading toast and show success
         toast.dismiss();
-        toast.success(t('deleted'));
+        toast.success(t('status.deleted'));
         queryClient.invalidateQueries({ queryKey: [modelName] });
       },
       onError: (error: Error) => {
