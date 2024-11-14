@@ -17,15 +17,7 @@ import { useTranslations } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
 
-export const ActionCell = ({
-  id,
-  modelName,
-  baseUrl,
-}: {
-  id: number;
-  modelName: string;
-  baseUrl: string;
-}) => {
+export const ActionCell = ({ id, modelName }: { id: number; modelName: string }) => {
   const t = useTranslations();
   const router = useRouter();
   const pathname = usePathname();
@@ -33,7 +25,6 @@ export const ActionCell = ({
 
   const { useDelete } = useCrud({
     modelName,
-    baseUrl,
   });
 
   const { mutate: deleteData } = useDelete();

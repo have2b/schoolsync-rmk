@@ -166,7 +166,8 @@ export function DataTable<TData, TValue>({
     setColumnSearches({});
   };
 
-  const selectedRows = table.getSelectedRowModel().rows.map((row) => row.original);
+  // const selectedRows = table.getSelectedRowModel().rows.map((row) => row.original);
+  const selectedRows = [];
 
   const paginationSection = (
     <div className="flex items-center justify-between px-2">

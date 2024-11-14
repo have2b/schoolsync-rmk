@@ -64,9 +64,7 @@ export const departmentColumn: ColumnDef<Department>[] = [
     header: () => (
       <HeaderCol column={{} as Column<unknown>} modelName="department" sortable={false} />
     ),
-    cell: ({ row }) => (
-      <ActionCell id={row.original.id} modelName="department" baseUrl="/departments" />
-    ),
+    cell: ({ row }) => <ActionCell id={row.original.id} modelName="department" />,
     enableSorting: false,
     enableHiding: false,
   },
